@@ -1,3 +1,5 @@
 bin/
-.xcuserdata
+xcuserdata
 .DS_Store
+Debug/
+Release/
