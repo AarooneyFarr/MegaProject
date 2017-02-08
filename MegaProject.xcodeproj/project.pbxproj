@@ -6,6 +6,11 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2442AF791E4B7272008C8B99 /* IntNodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF771E4B7272008C8B99 /* IntNodeArray.cpp */; };
+		24DE973F1E48D65300A8A690 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24DE973D1E48D65300A8A690 /* IntNode.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		24DE972F1E48D40700A8A690 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -19,7 +24,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2442AF771E4B7272008C8B99 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntNodeArray.cpp; sourceTree = "<group>"; };
+		2442AF781E4B7272008C8B99 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IntNodeArray.hpp; sourceTree = "<group>"; };
 		24DE97311E48D40700A8A690 /* MegaProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaProject; sourceTree = BUILT_PRODUCTS_DIR; };
+		24DE973D1E48D65300A8A690 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntNode.cpp; sourceTree = "<group>"; };
+		24DE973E1E48D65300A8A690 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IntNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,10 @@
 		24DE973B1E48D41600A8A690 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24DE973D1E48D65300A8A690 /* IntNode.cpp */,
+				24DE973E1E48D65300A8A690 /* IntNode.hpp */,
+				2442AF771E4B7272008C8B99 /* IntNodeArray.cpp */,
+				2442AF781E4B7272008C8B99 /* IntNodeArray.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -129,6 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DE973F1E48D65300A8A690 /* IntNode.cpp in Sources */,
+				2442AF791E4B7272008C8B99 /* IntNodeArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +270,7 @@
 				24DE973A1E48D40700A8A690 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
