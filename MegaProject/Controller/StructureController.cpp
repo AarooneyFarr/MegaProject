@@ -14,7 +14,8 @@ using namespace std;
 
 StructureController :: StructureController()
 {
-    
+    wordNode = Node<string>("derpy");
+    numberNode = Node<int>();
 }
 
 void StructureController :: testIntArray()
@@ -34,6 +35,11 @@ void StructureController :: testIntArray()
         cout << temp.getFromIndex(spot) << " is at " << spot << endl;
         
     }
+}
+
+void StructureController:: testNodeTypes()
+{
+    
 }
 
 void StructureController :: start()

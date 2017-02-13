@@ -9,10 +9,17 @@
 #ifndef StructureController_hpp
 #define StructureController_hpp
 
+#include "Node.hpp"
+
+
 class StructureController
 {
 private:
+    Node<string> wordNode;
+    Node<int> numberNode;
+    
     void testIntArray();
+    void testNodeTypes();
 public:
     StructureController();
     void start();
