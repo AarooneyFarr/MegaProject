@@ -27,7 +27,6 @@ public:
     
 };
 
-#endif /* Array_h */
 
     /*
      Creates an array of specified size
@@ -93,6 +92,7 @@ template <class Type>
         current->setNodeData(value);
     }
 
+#endif /* Array_h */
 
 
 

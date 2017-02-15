@@ -29,7 +29,7 @@ public:
     
 };
 
-#endif /* Node_hpp */
+
 
 /*
 Implementation section of the templated class!
@@ -81,5 +81,5 @@ Node<Type> * Node<Type> :: getNodePointer()
 }
 
 
-
+#endif /* Node_hpp */
 
