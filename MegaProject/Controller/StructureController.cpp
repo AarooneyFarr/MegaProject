@@ -6,9 +6,10 @@
 //  Copyright © 2017 Farr, Aaron. All rights reserved.
 //
 
-#include "IntNodeArray.hpp"
+#include "../Model/IntNodeArray.hpp"
 #include "StructureController.hpp"
 #include <iostream>
+#include "../Model/Timer.hpp"
 
 using namespace std;
 
@@ -16,6 +17,23 @@ StructureController :: StructureController()
 {
     wordNode = Node<string>("derpy");
     numberNode = Node<int>();
+    this->numberArray = Array<int>(9);
+}
+
+void StructureController :: testArrayTemplate()
+{
+    cout << "Array Template" << endl;
+    Timer arrayTimer;
+    arrayTimer.startTimer();
+    int test [9];
+    arrayTimer.stopTimer();
+    arrayTimer.displayTimerInformation();
+    arrayTimer.resetTimer();
+    arrayTimer.startTimer();
+    numberArray = Array<int>(9);
+    arrayTimer.stopTimer();
+    arrayTimer.displayTimerInformation();
+    
 }
 
 void StructureController :: testIntArray()

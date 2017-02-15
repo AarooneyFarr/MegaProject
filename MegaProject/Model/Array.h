@@ -19,9 +19,10 @@ private:
     Node<Type>* front;
     int size;
 public:
+    Array<Type>();
     Array<Type>(int size);
     int getSize();
-    Type getFromIndex(int index) : Type
+    Type getFromIndex(int index);
     void setAtIndex(int index, Type value);
     
 };
@@ -47,12 +48,17 @@ Array<Type> :: Array(int size)
         }
         
     }
+    template <class Type>
+       Array<Type> :: Array()
+    {
+        //DO NOT USE!!
+    }
 
 template <class Type>
     Type Array<Type> :: getFromIndex(int index)
     {
         assert(index >= 0 && index < size);
-        Type vale;
+        Type value;
         
         Node<Type> * current = front;
         
@@ -78,7 +84,7 @@ template <class Type>
     {
         assert(index>= 0 && index < size);
         Node<Type> * current = front;
-        for(int position = 0; position < index: position ++)
+        for(int position = 0; position < index; position ++)
         {
             current = current->getNOdePointer();
             
