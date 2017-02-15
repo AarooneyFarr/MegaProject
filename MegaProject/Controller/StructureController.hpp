@@ -12,11 +12,12 @@
 #include "Node.hpp"
 
 
+
 class StructureController
 {
 private:
-    Node<string> wordNode;
-    Node<int> numberNode;
+   Node<string> wordNode;
+   Node<int> numberNode;
     
     void testIntArray();
     void testNodeTypes();
