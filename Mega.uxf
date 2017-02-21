@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>110</x>
-      <y>370</y>
+      <y>420</y>
       <w>350</w>
       <h>290</h>
     </coordinates>
@@ -24,8 +24,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>670</x>
-      <y>450</y>
+      <x>630</x>
+      <y>710</y>
       <w>330</w>
       <h>280</h>
     </coordinates>
@@ -51,7 +51,7 @@ bg=cyan
     <id>UMLClass</id>
     <coordinates>
       <x>90</x>
-      <y>710</y>
+      <y>760</y>
       <w>290</w>
       <h>160</h>
     </coordinates>
@@ -70,20 +70,20 @@ bg=cyan
     <id>Relation</id>
     <coordinates>
       <x>370</x>
-      <y>620</y>
-      <w>320</w>
-      <h>200</h>
+      <y>840</y>
+      <w>280</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1..n
 </panel_attributes>
-    <additional_attributes>10.0;180.0;300.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;260.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>60</y>
+      <x>30</x>
+      <y>90</y>
       <w>460</w>
       <h>270</h>
     </coordinates>
@@ -109,7 +109,7 @@ Accessors
     <id>UMLClass</id>
     <coordinates>
       <x>160</x>
-      <y>10</y>
+      <y>60</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -121,8 +121,8 @@ Aaron Farr
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>60</y>
+      <x>640</x>
+      <y>40</y>
       <w>490</w>
       <h>290</h>
     </coordinates>
@@ -148,14 +148,53 @@ Aaron Farr
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>180</y>
-      <w>110</w>
+      <x>480</x>
+      <y>190</y>
+      <w>180</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1..n
 </panel_attributes>
-    <additional_attributes>10.0;40.0;90.0;10.0</additional_attributes>
+    <additional_attributes>160.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>460</y>
+      <w>460</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Model :: List&lt;Type&gt;
+--
+- front : Node&lt;Type&gt; *
+- size : int
+--
++ List&lt;Type&gt;() : constructor
++ List&lt;Type&gt;(const List&lt;Type&gt; &amp; source) : copy constructor
++ ~List&lt;Type&gt;() : destructor
+
++ addAtIndex(int index, Type value) : void
++ add(Type value) : void
++ remove(int index) : Type
++ setAtIndex(int index, Type data) : Type
++ getFromIndex(int index) : Type
++ contains(Type data) : bool
++ getSize() const : int
++ getFront() const : Node&lt;type&gt; * </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>350</y>
+      <w>600</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>580.0;110.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

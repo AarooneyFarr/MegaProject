@@ -30,6 +30,7 @@
 		2442AF811E4B7E64008C8B99 /* Runner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Runner.cpp; path = Controller/Runner.cpp; sourceTree = "<group>"; };
 		2442AF831E4B7E7C008C8B99 /* StructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StructureController.cpp; path = Controller/StructureController.cpp; sourceTree = "<group>"; };
 		2442AF841E4B7E7C008C8B99 /* StructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StructureController.hpp; path = Controller/StructureController.hpp; sourceTree = "<group>"; };
+		249CD8F71E5CA39700537B1A /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = Model/List.hpp; sourceTree = "<group>"; };
 		24A9E7631E54BE26003E7F72 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = Model/Array.h; sourceTree = "<group>"; };
 		24A9E7641E54BE26003E7F72 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		24A9E7651E54BE26003E7F72 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = Model/Timer.cpp; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		24DE973B1E48D41600A8A690 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				249CD8F71E5CA39700537B1A /* List.hpp */,
 				24A9E7631E54BE26003E7F72 /* Array.h */,
 				24A9E7641E54BE26003E7F72 /* Node.hpp */,
 				24A9E7651E54BE26003E7F72 /* Timer.cpp */,
