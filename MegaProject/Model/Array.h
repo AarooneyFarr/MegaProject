@@ -21,7 +21,14 @@ private:
 public:
     Array<Type>();
     Array<Type>(int size);
-    int getSize();
+    
+    ~Array<Type>();
+    Array<Type>(const Array<Type> & toBeCopied);
+    void operator = (const Array<Type> & toBeAssigned);
+    
+    int getSize() const;
+    Node<Type> * getFront() const;
+    
     Type getFromIndex(int index);
     void setAtIndex(int index, Type value);
     
@@ -72,7 +79,7 @@ template <class Type>
     }
 
 template <class Type>
-    int Array<Type> :: getSize()
+    int Array<Type> :: getSize() const
     {
         return size;
     }
@@ -91,6 +98,57 @@ template <class Type>
         
         current->setNodeData(value);
     }
+
+template <class Type>
+Node<Type>* Array<Type> :: getFront() const
+{
+    return front;
+}
+
+template <class Type>
+Array<Type> :: ~Array()
+{
+    int count = size;
+    Node<Type> * remove = front;
+    while(front != nullptr)
+    {
+        front = front->getNodePointer();
+        cout << "Moving to the next node. At: " << endl;
+        delete remove;
+        cout << "Deleting the old front pointer." << endl;
+        remove = front;
+        cout << "Moving to the new front pointer." << endl;
+        count--;
+        cout << "front is at: " <<K front << " count is: " << count << endl;
+    }
+}
+
+template <class Type>
+Array<Type> :: Array(const Array<Type> & toBeCopied)
+{
+    this->size = toBeCopied.getSize();
+    
+    this->front = new Node<Type>();
+    for(int index = 1; index < size; index++)
+    {
+        Node<type> * temp = new Node<Type>();
+        temp->setNodePointer(front);
+        front = temp;
+    }
+    
+    Node<Type> * copytemp = toBeCopied.getFront();
+    Node<type> * updated = this->front;
+    
+    for(int index = 0; index < size; index++)
+    {
+        updated->setNodeData(copyTemp->getNodeData());
+        updated = updated->getNodePointer();
+        copyTemp = copyTemp->getNodePointer();
+    }
+}
+
+//template <class Type>
+//void Array<Type> :: operator = (const Array<Type>)
 
 #endif /* Array_h */
 
