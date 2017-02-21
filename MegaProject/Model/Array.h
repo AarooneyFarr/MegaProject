@@ -11,6 +11,9 @@
 
 #include "Node.hpp"
 #include <assert.h>
+#include <iostream>
+
+using namespace std;
 
 template <class Type>
 class Array
@@ -24,7 +27,7 @@ public:
     
     ~Array<Type>();
     Array<Type>(const Array<Type> & toBeCopied);
-    void operator = (const Array<Type> & toBeAssigned);
+    //void operator = (const Array<Type> & toBeAssigned);
     
     int getSize() const;
     Node<Type> * getFront() const;
@@ -92,7 +95,7 @@ template <class Type>
         Node<Type> * current = front;
         for(int position = 0; position < index; position ++)
         {
-            current = current->getNOdePointer();
+            current = current->getNodePointer();
             
         }
         
@@ -113,13 +116,13 @@ Array<Type> :: ~Array()
     while(front != nullptr)
     {
         front = front->getNodePointer();
-        cout << "Moving to the next node. At: " << endl;
+        cout << "Moving to the next node. At: " << front << endl;
         delete remove;
         cout << "Deleting the old front pointer." << endl;
         remove = front;
         cout << "Moving to the new front pointer." << endl;
         count--;
-        cout << "front is at: " <<K front << " count is: " << count << endl;
+        cout << "front is at: " << front << " count is: " << count << endl;
     }
 }
 
@@ -131,13 +134,13 @@ Array<Type> :: Array(const Array<Type> & toBeCopied)
     this->front = new Node<Type>();
     for(int index = 1; index < size; index++)
     {
-        Node<type> * temp = new Node<Type>();
+        Node<Type> * temp = new Node<Type>();
         temp->setNodePointer(front);
         front = temp;
     }
     
-    Node<Type> * copytemp = toBeCopied.getFront();
-    Node<type> * updated = this->front;
+    Node<Type> * copyTemp = toBeCopied.getFront();
+    Node<Type> * updated = this->front;
     
     for(int index = 0; index < size; index++)
     {
@@ -147,8 +150,7 @@ Array<Type> :: Array(const Array<Type> & toBeCopied)
     }
 }
 
-//template <class Type>
-//void Array<Type> :: operator = (const Array<Type>)
+
 
 #endif /* Array_h */
 
