@@ -21,7 +21,7 @@ class List
 private:
     int size;
     Node<Type>* front;
-    Node<Type> end;
+    Node<Type>* end;
 public:
     List<Type>();
     
@@ -32,6 +32,8 @@ public:
     
     void addAtIndex(int index, Type value);
     void add(Type value);
+    void addFront(Type value);
+    void addEnd(Type data);
     Type remove(int index);
     Type setAtIndex(int index, Type data);
     Type getFromIndex(int index);
@@ -53,9 +55,22 @@ List<Type> :: List()
 }
 
 template <class Type>
+List<Type> :: ~List()
+    {
+        Node<Type> * destruction = front;
+        while(front!= nullptr)
+        {
+            front = front->getNodePointer();
+            delete destruction;
+            destruction = front;
+        }
+    }
+
+
+template <class Type>
 void List<Type> :: addFront(Type value)
 {
-    Node<Type> * first = new Node(value);
+    Node<Type> * first = new Node<Type>(value);
 
     
     if(size == 0)
@@ -77,7 +92,7 @@ void List<Type> :: addFront(Type value)
 }
 
 template <class Type>
-void List<type> :: addEnd(Type data)
+void List<Type> :: addEnd(Type data)
 {
     Node<Type> * added = new Node<Type>(data);
     if(size==0)
@@ -93,7 +108,7 @@ void List<type> :: addEnd(Type data)
 }
 
 template <class Type>
-void List<Type> :: adAtIndex(int index, Type value)
+void List<Type> :: addAtIndex(int index, Type value)
 {
     assert(index >= 0 && index <= size);
     if(index==0)
@@ -152,7 +167,7 @@ Type List<Type> :: getFromIndex(int index)
 }
 
 template <class Type>
-Type Array<Type> :: setAtIndex(int index, Type value)
+Type List<Type> :: setAtIndex(int index, Type value)
 {
     assert(index>= 0 && index < size);
     Node<Type> * current = front;
@@ -185,9 +200,9 @@ Type List<Type> :: remove(int index)
     }
     else if(index == size-1)
     {
-        for(int spot = 0; spot < index: spot++)
+        for(int spot = 0; spot < index; spot++)
         {
-            previouse = current;
+            previous = current;
             current = current->getNodePointer();
             
         }
@@ -198,9 +213,9 @@ Type List<Type> :: remove(int index)
     }
     else
     {
-        for(int spot = 0; spot < index: spot++)
+        for(int spot = 0; spot < index; spot++)
         {
-            previouse = current;
+            previous = current;
             current = current->getNodePointer();
             
         }

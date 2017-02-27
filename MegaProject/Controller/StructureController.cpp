@@ -10,6 +10,7 @@
 #include "StructureController.hpp"
 #include <iostream>
 #include "../Model/Timer.hpp"
+#include "../Model/List.hpp"
 
 using namespace std;
 
@@ -83,8 +84,21 @@ void StructureController:: testNodeTypes()
 
 void StructureController :: start()
 {
-    cout << "Going to test the IntNodeArray" << endl;
-    testIntArray();
-    cout << "Finished IntNodeArray" << endl;
+    //cout << "Going to test the IntNodeArray" << endl;
+    //testIntArray();
+    //cout << "Finished IntNodeArray" << endl;
+    testListIntro();
+}
+
+void StructureController :: testListIntro()
+{
+    List<int> sample;
+    sample.addFront(2);
+    sample.addEnd(3);
+    sample.addFront(1);
+    cout << "this should go 1, 2, 3." << endl;
+    
+    
+    
 }
 
