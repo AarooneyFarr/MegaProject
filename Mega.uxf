@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
-      <y>380</y>
-      <w>350</w>
-      <h>290</h>
+      <x>688</x>
+      <y>808</y>
+      <w>280</w>
+      <h>232</h>
     </coordinates>
     <panel_attributes>Timer
 --
@@ -24,10 +24,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>670</y>
-      <w>330</w>
-      <h>280</h>
+      <x>688</x>
+      <y>568</y>
+      <w>264</w>
+      <h>224</h>
     </coordinates>
     <panel_attributes>IntNode
 --
@@ -50,10 +50,10 @@ bg=cyan
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>60</x>
-      <y>720</y>
-      <w>290</w>
-      <h>160</h>
+      <x>256</x>
+      <y>608</y>
+      <w>232</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>IntNodeArray
 --
@@ -69,23 +69,23 @@ bg=cyan
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>800</y>
-      <w>280</w>
-      <h>80</h>
+      <x>480</x>
+      <y>672</y>
+      <w>224</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1..n
 </panel_attributes>
-    <additional_attributes>10.0;10.0;260.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;50.0;260.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>50</y>
-      <w>460</w>
-      <h>270</h>
+      <x>208</x>
+      <y>72</y>
+      <w>368</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
 --
@@ -108,10 +108,10 @@ Accessors
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>130</x>
-      <y>20</y>
-      <w>100</w>
-      <h>40</h>
+      <x>208</x>
+      <y>0</y>
+      <w>80</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>Created by
 Aaron Farr
@@ -121,10 +121,10 @@ Aaron Farr
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>610</x>
-      <y>0</y>
-      <w>490</w>
-      <h>290</h>
+      <x>696</x>
+      <y>32</y>
+      <w>392</w>
+      <h>232</h>
     </coordinates>
     <panel_attributes>Array&lt;Type&gt;
 --
@@ -148,23 +148,23 @@ Aaron Farr
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>150</y>
-      <w>180</w>
-      <h>60</h>
+      <x>568</x>
+      <y>152</y>
+      <w>144</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1..n
 </panel_attributes>
-    <additional_attributes>160.0;10.0;10.0;30.0</additional_attributes>
+    <additional_attributes>160.0;10.0;70.0;10.0;70.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>550</x>
-      <y>320</y>
-      <w>470</w>
-      <h>290</h>
+      <x>632</x>
+      <y>304</y>
+      <w>376</w>
+      <h>232</h>
     </coordinates>
     <panel_attributes>Model :: List&lt;Type&gt;
 --
@@ -189,13 +189,54 @@ m2=1..n
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
-      <y>310</y>
-      <w>580</w>
-      <h>40</h>
+      <x>568</x>
+      <y>216</y>
+      <w>248</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=0..n</panel_attributes>
-    <additional_attributes>560.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>290.0;110.0;290.0;80.0;110.0;80.0;110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>280</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>352</y>
+      <w>520</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>BiDirectionalNode&lt;Type&gt;
+--
+- nodeData : Type
+- nodePointer : BiDirectionalNode&lt;Type&gt; * 
+- previousPointer : BiDirectionalNode&lt;Type&gt; *
+
+--
++ BiDriectionalNode&lt;Type&gt;() : constructor
++ BiDirectionalNode&lt;Type&gt;(Type value) : constructor
++ BiDirectionalNode&lt;Type&gt;(Type value, BiDirectionalNode&lt;Type&gt;* next) : constructor
+
++ getNodeData() : Type
++ getNodePointer() : BiDirectionalNode&lt;Type&gt;*
++ getPreviousPointer() : BiDirectionalNode&lt;type&gt;*
+
++ setNodeData(Type value) : void
++ setNodePointer() : BiDirectionalNode&lt;Type&gt;*
++ set PreviousPointer() : BiDirectionalNode&lt;Type&gt;*
+
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

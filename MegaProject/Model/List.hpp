@@ -45,6 +45,7 @@ public:
     
 };
 
+//Constructor
 template <class Type>
 List<Type> :: List()
 {
@@ -54,6 +55,7 @@ List<Type> :: List()
     
 }
 
+//Destructor
 template <class Type>
 List<Type> :: ~List()
     {
@@ -67,6 +69,7 @@ List<Type> :: ~List()
     }
 
 
+// Adds an object at the front of a list
 template <class Type>
 void List<Type> :: addFront(Type value)
 {
@@ -91,6 +94,7 @@ void List<Type> :: addFront(Type value)
    
 }
 
+//Adds an object to the end of a list
 template <class Type>
 void List<Type> :: addEnd(Type data)
 {
@@ -107,6 +111,7 @@ void List<Type> :: addEnd(Type data)
     }
 }
 
+//Adds an object to the specified index
 template <class Type>
 void List<Type> :: addAtIndex(int index, Type value)
 {
@@ -148,6 +153,7 @@ void List<Type> :: addAtIndex(int index, Type value)
     
 }
 
+//gets an object from the index
 template <class Type>
 Type List<Type> :: getFromIndex(int index)
 {
@@ -166,6 +172,7 @@ Type List<Type> :: getFromIndex(int index)
     
 }
 
+//sets an object at index
 template <class Type>
 Type List<Type> :: setAtIndex(int index, Type value)
 {
@@ -181,6 +188,7 @@ Type List<Type> :: setAtIndex(int index, Type value)
     return current;
 }
 
+//removes the specified index
 template <class Type>
 Type List<Type> :: remove(int index)
 {
