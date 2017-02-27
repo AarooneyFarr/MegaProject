@@ -40,6 +40,7 @@
 		24A9E7691E54BE26003E7F72 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = Model/IntNodeArray.cpp; sourceTree = "<group>"; };
 		24A9E76A1E54BE26003E7F72 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = Model/IntNodeArray.hpp; sourceTree = "<group>"; };
 		24DE97311E48D40700A8A690 /* MegaProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaProject; sourceTree = BUILT_PRODUCTS_DIR; };
+		24EE6CBD1E648D5400526304 /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BiDirectionalNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 				24A9E7651E54BE26003E7F72 /* Timer.cpp */,
 				24A9E7661E54BE26003E7F72 /* Timer.hpp */,
 				24A9E7621E54B2DF003E7F72 /* Typed Data Sample */,
+				24EE6CBD1E648D5400526304 /* BiDirectionalNode.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
