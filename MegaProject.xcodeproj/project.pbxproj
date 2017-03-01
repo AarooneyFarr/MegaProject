@@ -27,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2439B3571E6728E400BBECA0 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
+		2439B3581E672FCE00BBECA0 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = Model/Stack.hpp; sourceTree = "<group>"; };
 		2442AF811E4B7E64008C8B99 /* Runner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Runner.cpp; path = Controller/Runner.cpp; sourceTree = "<group>"; };
 		2442AF831E4B7E7C008C8B99 /* StructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StructureController.cpp; path = Controller/StructureController.cpp; sourceTree = "<group>"; };
 		2442AF841E4B7E7C008C8B99 /* StructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StructureController.hpp; path = Controller/StructureController.hpp; sourceTree = "<group>"; };
@@ -110,6 +112,8 @@
 				24A9E7661E54BE26003E7F72 /* Timer.hpp */,
 				24A9E7621E54B2DF003E7F72 /* Typed Data Sample */,
 				24EE6CBD1E648D5400526304 /* BiDirectionalNode.hpp */,
+				2439B3571E6728E400BBECA0 /* DoublyLinkedList.hpp */,
+				2439B3581E672FCE00BBECA0 /* Stack.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
