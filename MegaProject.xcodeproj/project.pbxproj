@@ -27,6 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		242C63DD1E69C9AA005C8210 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Queue.hpp; path = Model/Queue.hpp; sourceTree = "<group>"; };
+		242C63E01E69CA02005C8210 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
+		242C63E11E69CA15005C8210 /* DoubleList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoubleList.hpp; path = Model/DoubleList.hpp; sourceTree = "<group>"; };
 		2439B3571E6728E400BBECA0 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		2439B3581E672FCE00BBECA0 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = Model/Stack.hpp; sourceTree = "<group>"; };
 		2442AF811E4B7E64008C8B99 /* Runner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Runner.cpp; path = Controller/Runner.cpp; sourceTree = "<group>"; };
@@ -56,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		242C63DE1E69C9BB005C8210 /* Inherits From DoublyLinked */ = {
+			isa = PBXGroup;
+			children = (
+				242C63DD1E69C9AA005C8210 /* Queue.hpp */,
+				2439B3581E672FCE00BBECA0 /* Stack.hpp */,
+				242C63E01E69CA02005C8210 /* CircularList.hpp */,
+				242C63E11E69CA15005C8210 /* DoubleList.hpp */,
+			);
+			name = "Inherits From DoublyLinked";
+			sourceTree = "<group>";
+		};
 		2442AF801E4B7E44008C8B99 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,10 +124,10 @@
 				24A9E7641E54BE26003E7F72 /* Node.hpp */,
 				24A9E7651E54BE26003E7F72 /* Timer.cpp */,
 				24A9E7661E54BE26003E7F72 /* Timer.hpp */,
-				24A9E7621E54B2DF003E7F72 /* Typed Data Sample */,
 				24EE6CBD1E648D5400526304 /* BiDirectionalNode.hpp */,
 				2439B3571E6728E400BBECA0 /* DoublyLinkedList.hpp */,
-				2439B3581E672FCE00BBECA0 /* Stack.hpp */,
+				24A9E7621E54B2DF003E7F72 /* Typed Data Sample */,
+				242C63DE1E69C9BB005C8210 /* Inherits From DoublyLinked */,
 			);
 			name = Model;
 			sourceTree = "<group>";
