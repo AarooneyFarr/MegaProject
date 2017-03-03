@@ -15,7 +15,14 @@ class Stack :: DoublyLinkedList<Type>
 private:
 public:
     Stack();
+    ~Stack();
+    
     void add(Type value);
+    
+    Type remove(int index);
+    Type pop();
+    Type peek();
+    Type push(Type data);
 }
 
 template <class Type>
