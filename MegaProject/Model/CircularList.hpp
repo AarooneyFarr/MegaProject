@@ -28,5 +28,5 @@ public:
     Type remove(int index);
     
     
-}
+};
 #endif /* CircularList_h */

@@ -12,7 +12,7 @@
 #include "../Model/DoublyLinkedList.hpp"
 
 template <class Type>
-class Stack :: DoublyLinkedList<Type>
+class Stack : DoublyLinkedList<Type>
 {
 private:
     BiDirectionalNode<Type> * front;
@@ -27,8 +27,8 @@ public:
     
     Type pop();
     Type peek();
-    Type push(Type data);
-}
+    void push(Type data);
+};
 
 template <class Type>
 Stack<Type> :: Stack()
@@ -64,7 +64,7 @@ void Stack<Type> :: add(Type valueToAdd)
 template <class Type>
 Type Stack<Type> :: remove(int index)
 {
-    assert(index == this->getSize() - 1 && this-GetSize()-> > 0);
+    assert(index == this->getSize() - 1 && this->getSize() > 0);
     return pop();
 }
 
@@ -114,7 +114,7 @@ Type Stack<Type> :: peek()
 template <class Type>
 void Stack<Type> :: push(Type addedThing)
 {
-    BiDirectionalNode<Type> * addToStack = new BiDirectionalNode(addedThing);
+    BiDirectionalNode<Type> * addToStack = new BiDirectionalNode<Type>(addedThing);
     
     if(this->size == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
     {

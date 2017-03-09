@@ -24,13 +24,13 @@ public:
     ~DoubleList();
     
     void add(Type data);
-    void remove(int index);
+    Type remove(int index);
     void addAtIndex(int index, Type data);
     void addAtIndexFast(int index, Type value);
     
     Type getFromIndex(int index);
     Type getFromIndexFast(int index);
-}
+};
 
 template <class Type>
 DoubleList<Type> :: DoubleList() : DoublyLinkedList<Type>()
@@ -47,7 +47,7 @@ DoubleList<Type> :: ~DoubleList()
 template <class Type>
 void DoubleList<Type> :: add(Type value)
 {
-    BiDirectionalNode<Type> * addedNode = new BiDirectionalNode(value)
+    BiDirectionalNode<Type> * addedNode = new BiDirectionalNode<Type>(value);
     if(this->getSize() == 0)
     {
         this->setFront(addedNode);
@@ -60,11 +60,11 @@ void DoubleList<Type> :: add(Type value)
     }
     
     this->setEnd(addedNode);
-    this->setSize(this->GetSize() + 1);
+    this->setSize(this->getSize() + 1);
 }
 
 template <class Type>
-void DoubleList<Type> :: remove(int index)
+Type DoubleList<Type> :: remove(int index)
 {
     Type derp;
     BiDirectionalNode<Type> * nodeToTakeOut = this->getFront();
@@ -95,16 +95,10 @@ void DoubleList<Type> :: addAtIndex(int index, Type data)
 }
 
 template <class Type>
-void DoubleList<Type> :: addAtIndex(int index, Type value)
-{
-    
-}
-
-
-template <class Type>
 Type DoubleList<Type> :: getFromIndex(int index)
 {
-    return null
+    Type egg;
+    return egg;
 }
 
 template <class Type>
@@ -127,7 +121,7 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
     else
     {
         reference = this->getEnd();
-        for(int position = this->getSize() - 1: position > index; position--)
+        for(int position = this->getSize() - 1; position > index; position--)
         {
             reference = reference->getPreviousPointer();
         }

@@ -35,7 +35,7 @@ public:
 };
 
 template <class Type>
-DoublyLinkedList<Type> :: DoublyLinkedList()
+DoublyLinkedList<Type> :: DoublyLinkedList() 
 {
     this->size = 0;
     this->front = nullptr;
