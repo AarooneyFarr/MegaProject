@@ -85,7 +85,7 @@ void List<Type> :: addFront(Type value)
     }
     else
     {
-       // Node<Type> * newFirst = new Node<type>(value);
+       // Node<Type> * newFirst = new Node<Type>(value);
         first->setNextPointer(front);
         
         front = first;

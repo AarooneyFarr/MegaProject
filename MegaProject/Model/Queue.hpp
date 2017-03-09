@@ -9,7 +9,7 @@
 #ifndef Queue_h
 #define Queue_h
 
-#include "DoublyLinkedList.hpp"
+#include "../Model/DoublyLinkedList.hpp"
 
 template<class Type>
 class Queue : public DoublyLinkedList<Type>
@@ -80,7 +80,7 @@ template <class Type>
 void Queue<Type> :: enqueue(Type insertedValue)
 {
     
-    BiDirectionalNOde<Type> * added = new BiDirectionalNode<Type>(insertedValue);
+    BiDirectionalNode<Type> * added = new BiDirectionalNode<Type>(insertedValue);
     
     if(this->getSize() == 0 || this->getFront == nullptr || this->getEnd() == nullptr)
     {

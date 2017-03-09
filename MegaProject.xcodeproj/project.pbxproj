@@ -35,6 +35,7 @@
 		2442AF811E4B7E64008C8B99 /* Runner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Runner.cpp; path = Controller/Runner.cpp; sourceTree = "<group>"; };
 		2442AF831E4B7E7C008C8B99 /* StructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StructureController.cpp; path = Controller/StructureController.cpp; sourceTree = "<group>"; };
 		2442AF841E4B7E7C008C8B99 /* StructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StructureController.hpp; path = Controller/StructureController.hpp; sourceTree = "<group>"; };
+		246BE4B91E71B70100D62AF8 /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BiDirectionalNode.hpp; path = Model/BiDirectionalNode.hpp; sourceTree = "<group>"; };
 		249CD8F71E5CA39700537B1A /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = Model/List.hpp; sourceTree = "<group>"; };
 		24A9E7631E54BE26003E7F72 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = Model/Array.h; sourceTree = "<group>"; };
 		24A9E7641E54BE26003E7F72 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		24A9E7691E54BE26003E7F72 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = Model/IntNodeArray.cpp; sourceTree = "<group>"; };
 		24A9E76A1E54BE26003E7F72 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = Model/IntNodeArray.hpp; sourceTree = "<group>"; };
 		24DE97311E48D40700A8A690 /* MegaProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaProject; sourceTree = BUILT_PRODUCTS_DIR; };
-		24EE6CBD1E648D5400526304 /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BiDirectionalNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +119,12 @@
 		24DE973B1E48D41600A8A690 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				246BE4B91E71B70100D62AF8 /* BiDirectionalNode.hpp */,
 				249CD8F71E5CA39700537B1A /* List.hpp */,
 				24A9E7631E54BE26003E7F72 /* Array.h */,
 				24A9E7641E54BE26003E7F72 /* Node.hpp */,
 				24A9E7651E54BE26003E7F72 /* Timer.cpp */,
 				24A9E7661E54BE26003E7F72 /* Timer.hpp */,
-				24EE6CBD1E648D5400526304 /* BiDirectionalNode.hpp */,
 				2439B3571E6728E400BBECA0 /* DoublyLinkedList.hpp */,
 				24A9E7621E54B2DF003E7F72 /* Typed Data Sample */,
 				242C63DE1E69C9BB005C8210 /* Inherits From DoublyLinked */,

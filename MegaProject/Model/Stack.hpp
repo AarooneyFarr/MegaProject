@@ -9,10 +9,15 @@
 #ifndef Stack_h
 #define Stack_h
 
+#include "../Model/DoublyLinkedList.hpp"
+
 template <class Type>
 class Stack :: DoublyLinkedList<Type>
 {
 private:
+    BiDirectionalNode<Type> * front;
+    BiDirectionalNode<Type> * end;
+    int size;
 public:
     Stack();
     ~Stack();

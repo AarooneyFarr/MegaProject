@@ -9,14 +9,102 @@
 #ifndef DoubleList_h
 #define DoubleList_h
 
-#include "DoublyLinkedList.hpp"
+#include "../Model/DoublyLinkedList.hpp"
+
 
 template<class Type>
 class DoubleList : public DoublyLinkedList<Type>
 {
 private:
+    BiDirectionalNode<Type> * front;
+    BiDirectionalNode<Type> * end;
+    int size;
 public:
+    DoubleList();
+    ~DoubleList();
     
+    void add(Type data);
+    void remove(int index);
+    void addAtIndex(int index, Type data);
+    void addAtIndexFast(int index, Type value);
+    
+    Type getFromIndex(int index);
+    Type getFromIndexFast(int index);
+}
+
+template <class Type>
+DoubleList<Type> :: DoubleList() : DoublyLinkedList<Type>()
+{
+    
+}
+
+template <class Type>
+DoubleList<Type> :: ~DoubleList()
+{
+    
+}
+
+template <class Type>
+void DoubleList<Type> :: add(Type value)
+{
+    BiDirectionalNode<Type> * addedNode = new BiDirectionalNode(value)
+    if(this->getSize() == 0)
+    {
+        this->setFront(addedNode);
+    }
+    else
+    {
+        this->getEnd()->setNextPointer(addedNode);
+        addedNode->setPreviousPointer(this->getEnd());
+        
+    }
+    
+    this->setEnd(addedNode);
+    this->setSize(this->GetSize() + 1);
+}
+
+template <class Type>
+void DoubleList<Type> :: remove(int index)
+{
+    Type derp;
+    BiDirectionalNode<Type> * nodeToTakeOut = this->getFront();
+    
+    for(int spot = 0; spot < index; spot++)
+    {
+        nodeToTakeOut = nodeToTakeOut->getNextPointer();
+    }
+    
+    derp = nodeToTakeOut->getNodeData();
+    
+    BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
+    BiDirectionalNode<Type> * next = nodeToTakeOut->getNextPointer();
+    
+    prev->setNextPointer(next);
+    next->setPreviousPointer(prev);
+    
+    delete nodeToTakeOut;
+    
+    this->setSize(this->getSize() - 1);
+    return derp;
+}
+
+template <class Type>
+void DoubleList<Type> :: addAtIndex(int index, Type data)
+{
+    
+}
+
+template <class Type>
+void DoubleList<Type> :: addAtIndex(int index, Type value)
+{
+    
+}
+
+
+template <class Type>
+Type DoubleList<Type> :: getFromIndex(int index)
+{
+    return null
 }
 
 template <class Type>
@@ -47,6 +135,7 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
     valueAtIndex = reference->getNodeData();
     return valueAtIndex;
 }
+
 
 
 

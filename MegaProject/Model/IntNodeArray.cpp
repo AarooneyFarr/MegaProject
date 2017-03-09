@@ -6,7 +6,7 @@
 //  Copyright © 2017 Farr, Aaron. All rights reserved.
 //
 
-#include "IntNodeArray.hpp"
+#include "../Model/IntNodeArray.hpp"
 #include <assert.h>
 
 IntNodeArray :: IntNodeArray(int size)

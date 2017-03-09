@@ -9,7 +9,7 @@
 #ifndef DoublyLinkedList_h
 #define DoublyLinkedList_h
 
-#include "BiDirectionalNode.hpp"
+#include "../Model/BiDirectionalNode.hpp"
 
 template <class Type>
 class DoublyLinkedList
@@ -21,7 +21,7 @@ private:
 public:
     virtual void add(Type value) = 0;
     virtual Type remove(int index) = 0;
-    virtual DoublyLinkedList();
+    DoublyLinkedList();
    
     virtual ~DoublyLinkedList() = 0;
     
@@ -29,6 +29,9 @@ public:
     BiDirectionalNode<Type> * getFront() const;
     BiDirectionalNode<Type> * getEnd() const;
     
+    void setFront(BiDirectionalNode<Type> * front);
+    void setSize(int updated);
+    void setEnd(BiDirectionalNode<Type> * end);
 };
 
 template <class Type>
@@ -40,17 +43,45 @@ DoublyLinkedList<Type> :: DoublyLinkedList()
 }
 
 template <class Type>
-DoublyLinkedList<Type> :: getFront()
+DoublyLinkedList<Type> :: ~DoublyLinkedList()
+{
+    //Implemented only to avoid errors.
+    //Just like a Java interface method.
+}
+
+template <class Type>
+int DoublyLinkedList<Type> :: getSize() const
+{
+    return this->size;
+}
+
+template <class Type>
+BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getFront() const
 {
     return this->front;
 }
 
 template <class Type>
-DoublyLinkedList<Type> :: getEnd()
+BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getEnd() const
 {
     return this->end;
 }
 
+template <class Type>
+void DoublyLinkedList<Type> :: setSize(int size)
+{
+    this->size = size;
+}
 
+template <class Type>
+void DoublyLinkedList<Type> :: setFront(BiDirectionalNode<Type> * front)
+{
+    this->front = front;
+}
 
+template <class Type>
+void DoublyLinkedList<Type> :: setEnd(BiDirectionalNode<Type> * end)
+{
+    this->end = end;
+}
 #endif /* DoublyLinkedList_h */
