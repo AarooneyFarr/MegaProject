@@ -11,6 +11,7 @@
 #include <iostream>
 #include "../Model/Timer.hpp"
 #include "../Model/List.hpp"
+#include "../Model/Meme.hpp"
 
 using namespace std;
 
@@ -87,8 +88,9 @@ void StructureController :: start()
     //cout << "Going to test the IntNodeArray" << endl;
     //testIntArray();
     //cout << "Finished IntNodeArray" << endl;
-    testListIntro();
-    testListTiming();
+   // testListIntro();
+    //testListTiming();
+    testMemeQueue();
 }
 
 void StructureController :: testListIntro()
@@ -147,3 +149,17 @@ void StructureController :: testListTiming()
     
    }
 
+void StructureController :: testMemeQueue()
+{
+    Meme firstMeme("toddler fist! with pinwheel");
+    Queue<Meme> memeQueue;
+    memeQueue.add(firstMeme);
+    Meme secondMeme;
+    secondMeme.setDankness(8453);
+    memeQueue.enqueue(secondMeme);
+    
+    Meme temp = memeQueue.dequeue();
+    cout << "this should be 8453 and is: " << temp.getDankness() << endl;
+    
+    
+}

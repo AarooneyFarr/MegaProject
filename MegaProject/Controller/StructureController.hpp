@@ -35,6 +35,7 @@ private:
     void testAdvancedFeatures();
     void testListIntro();
     void testListTiming();
+    void testMemeQueue();
 public:
     StructureController();
     void start();
