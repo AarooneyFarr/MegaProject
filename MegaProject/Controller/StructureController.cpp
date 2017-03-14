@@ -157,6 +157,8 @@ void StructureController :: testMemeQueue()
     Meme secondMeme;
     secondMeme.setDankness(8453);
     memeQueue.enqueue(secondMeme);
+    memeQueue.remove(0);
+    
     
     Meme temp = memeQueue.dequeue();
     cout << "this should be 8453 and is: " << temp.getDankness() << endl;
