@@ -116,6 +116,10 @@ Type CircularList<Type> :: remove(int index)
     
 }
 
+/*
+ A helper method to loop throught the list and find a specified node
+ */
+
 template <class Type>
 BiDirectionalNode<Type> * CircularList<Type> :: findNode(int index)
 {
