@@ -36,6 +36,8 @@ private:
     void testListIntro();
     void testListTiming();
     void testMemeQueue();
+    void testLists();
+    void testIntStack();
 public:
     StructureController();
     void start();

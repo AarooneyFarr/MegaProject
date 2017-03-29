@@ -13,6 +13,8 @@
 		24A9E76B1E54BE26003E7F72 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24A9E7651E54BE26003E7F72 /* Timer.cpp */; };
 		24A9E76C1E54BE26003E7F72 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24A9E7671E54BE26003E7F72 /* IntNode.cpp */; };
 		24A9E76D1E54BE26003E7F72 /* IntNodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24A9E7691E54BE26003E7F72 /* IntNodeArray.cpp */; };
+		24FA7F1C1E8BF04B008AA4F3 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24FA7F1A1E8BF04B008AA4F3 /* FileController.cpp */; };
+		24FA7F221E8BF5E5008AA4F3 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24FA7F201E8BF5E5008AA4F3 /* CrimeData.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +51,10 @@
 		24A9E7691E54BE26003E7F72 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = Model/IntNodeArray.cpp; sourceTree = "<group>"; };
 		24A9E76A1E54BE26003E7F72 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = Model/IntNodeArray.hpp; sourceTree = "<group>"; };
 		24DE97311E48D40700A8A690 /* MegaProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaProject; sourceTree = BUILT_PRODUCTS_DIR; };
+		24FA7F1A1E8BF04B008AA4F3 /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = Controller/FileController.cpp; sourceTree = "<group>"; };
+		24FA7F1B1E8BF04B008AA4F3 /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = Controller/FileController.hpp; sourceTree = "<group>"; };
+		24FA7F201E8BF5E5008AA4F3 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = Model/CrimeData.cpp; sourceTree = "<group>"; };
+		24FA7F211E8BF5E5008AA4F3 /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CrimeData.hpp; path = Model/CrimeData.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 				2442AF811E4B7E64008C8B99 /* Runner.cpp */,
 				2442AF831E4B7E7C008C8B99 /* StructureController.cpp */,
 				2442AF841E4B7E7C008C8B99 /* StructureController.hpp */,
+				24FA7F1A1E8BF04B008AA4F3 /* FileController.cpp */,
+				24FA7F1B1E8BF04B008AA4F3 /* FileController.hpp */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -122,6 +130,8 @@
 		24DE973B1E48D41600A8A690 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24FA7F201E8BF5E5008AA4F3 /* CrimeData.cpp */,
+				24FA7F211E8BF5E5008AA4F3 /* CrimeData.hpp */,
 				246BE4B91E71B70100D62AF8 /* BiDirectionalNode.hpp */,
 				249CD8F71E5CA39700537B1A /* List.hpp */,
 				24A9E7631E54BE26003E7F72 /* Array.h */,
@@ -194,11 +204,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24FA7F221E8BF5E5008AA4F3 /* CrimeData.cpp in Sources */,
 				24A9E76D1E54BE26003E7F72 /* IntNodeArray.cpp in Sources */,
 				24A9E76B1E54BE26003E7F72 /* Timer.cpp in Sources */,
 				24A9E76C1E54BE26003E7F72 /* IntNode.cpp in Sources */,
 				2463F5761E76DAB0001431F8 /* Meme.cpp in Sources */,
 				2442AF821E4B7E64008C8B99 /* Runner.cpp in Sources */,
+				24FA7F1C1E8BF04B008AA4F3 /* FileController.cpp in Sources */,
 				2442AF851E4B7E7C008C8B99 /* StructureController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

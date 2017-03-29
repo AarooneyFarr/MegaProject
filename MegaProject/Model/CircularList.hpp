@@ -46,7 +46,7 @@ void CircularList<Type> :: add(Type data)
         this->setFront(addMe);
         this->setEnd(addMe);
         addMe->setPreviousPointer(this->getFront());
-        this->getFront()->setNextPointer(this-getEnd());
+        this->getFront()->setNextPointer(this->getEnd());
         
         
         
@@ -153,7 +153,7 @@ Type CircularList<Type> :: getFromIndex(int index)
     assert(index >= 0 && index < this->getSize());
     Type retrieved;
     
-    BiDirectionalNOde<Tyep> * current = findNode(index);
+    BiDirectionalNode<Type> * current = findNode(index);
     
     retrieved = current->getNodeData();
     

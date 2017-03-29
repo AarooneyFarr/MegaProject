@@ -88,6 +88,10 @@ Type Stack<Type> :: pop()
     {
     update->setNextPointer(nullptr);
     }
+    else
+    {
+        this->setFront(nullptr);
+    }
     
     delete this->getEnd();
     
@@ -118,7 +122,7 @@ void Stack<Type> :: push(Type addedThing)
     
     if(this->size == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
     {
-        this->setFront() = addToStack;
+        this->setFront(addToStack);
       
     }
     else
@@ -130,7 +134,7 @@ void Stack<Type> :: push(Type addedThing)
     }
     
     
-      this->setEnd() = addToStack;
+      this->setEnd(addToStack);
       this->setSize(this->getSize() + 1);
     
 }

@@ -116,13 +116,13 @@ Array<Type> :: ~Array()
     while(front != nullptr)
     {
         front = front->getNextPointer();
-        cout << "Moving to the next node. At: " << front << endl;
+       // cout << "Moving to the next node. At: " << front << endl;
         delete remove;
-        cout << "Deleting the old front pointer." << endl;
+       // cout << "Deleting the old front pointer." << endl;
         remove = front;
-        cout << "Moving to the new front pointer." << endl;
+       // cout << "Moving to the new front pointer." << endl;
         count--;
-        cout << "front is at: " << front << " count is: " << count << endl;
+       // cout << "front is at: " << front << " count is: " << count << endl;
     }
 }
 

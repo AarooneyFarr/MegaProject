@@ -90,7 +90,9 @@ void StructureController :: start()
     //cout << "Finished IntNodeArray" << endl;
    // testListIntro();
     //testListTiming();
-    testMemeQueue();
+    //testMemeQueue();
+    //testLists();
+    testIntStack();
 }
 
 void StructureController :: testListIntro()
@@ -147,21 +149,58 @@ void StructureController :: testListTiming()
     
     cout << "A time savings?? of: " << averageSlow - averageFast << " microseconds."<< endl;
     
-   }
+   333333333}
 
 void StructureController :: testMemeQueue()
 {
     Meme firstMeme("toddler fist! with pinwheel");
     Queue<Meme> memeQueue;
     memeQueue.add(firstMeme);
+    memeQueue.add(firstMeme);
     Meme secondMeme;
     secondMeme.setDankness(8453);
     memeQueue.enqueue(secondMeme);
+    memeQueue.peek();
+    
+    cout << "Size should be 3 and is: " << memeQueue.getSize() << endl;
     memeQueue.remove(0);
+   
+    cout << "Size should be 2 and is: " << memeQueue.getSize() << endl;
     
     
     Meme temp = memeQueue.dequeue();
-    cout << "this should be 8453 and is: " << temp.getDankness() << endl;
+    cout << "this should be 27 and is: " << temp.getDankness() << endl;
     
+    
+}
+
+void StructureController :: testLists()
+{
+    List<int> sample;
+    
+    sample.addFront(2);
+    sample.addFront(1);
+    sample.addEnd(3);
+    sample.setAtIndex(2,5);
+    sample.remove(0);
+    sample.addAtIndex(0,0);
+    cout << "This should be 1 and is: "<< sample.contains(2) << endl;
+    cout << "This should be 025 and is: " << sample.getFromIndex(0) << sample.getFromIndex(1) << sample.getFromIndex(2) << endl;
+    cout << "This should be 0 and is: " << sample.getFromIndex(0) << endl;
+    
+    
+}
+
+void StructureController :: testIntStack()
+{
+    int firstInt = 1;
+    Stack<int> intStack;
+    intStack.push(firstInt);
+    int secondInt = 2;
+    intStack.push(secondInt);
+    intStack.pop();
+    cout << "This should be 1 and is " << intStack.peek() << endl;
+    intStack.add(2);
+    intStack.remove(1);
     
 }

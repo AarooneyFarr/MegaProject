@@ -109,6 +109,7 @@ void List<Type> :: addEnd(Type data)
         end->setNextPointer(added);
         this->end = added;
     }
+    size++;
 }
 
 //Adds an object to the specified index
@@ -127,14 +128,14 @@ void List<Type> :: addAtIndex(int index, Type value)
     else
     {
        
-        Node<Type> insertedNode = new Node<Type>(value);
+        Node<Type> * insertedNode = new Node<Type>(value);
         Node<Type> * current = front;
         Node<Type> * previous = nullptr;
         
         for(int position = 0; position < index; position++)
         {
             previous = current;
-            current = current-> getNextPointer();
+            current = current->getNextPointer();
             
         }
         
@@ -177,6 +178,7 @@ template <class Type>
 Type List<Type> :: setAtIndex(int index, Type value)
 {
     assert(index>= 0 && index < size);
+    Type removedData;
     Node<Type> * current = front;
     for(int position = 0; position < index; position ++)
     {
@@ -185,7 +187,7 @@ Type List<Type> :: setAtIndex(int index, Type value)
     }
     
     current->setNodeData(value);
-    return current;
+    return removedData;
 }
 
 //removes the specified index
@@ -193,7 +195,7 @@ template <class Type>
 Type List<Type> :: remove(int index)
 {
     
-    assert(index>= 0 && index < size);
+    assert(index >= 0 && index <= size);
     
     Type removed;
     
@@ -245,7 +247,24 @@ Type List<Type> :: remove(int index)
     return removed;
 }
 
-
+template <class Type>
+bool List<Type> :: contains(Type findMe)
+{
+    bool isInList = false;
+    Node<Type> * current = front;
+    
+    for (int index = 0; index < size; index++)
+    {
+        if( current->getNodeData() == findMe)
+        {
+            isInList = true;
+            return isInList;
+            
+        }
+        current = current->getNextPointer();
+    }
+    return isInList;
+}
 
 
 #endif /* List_h */
