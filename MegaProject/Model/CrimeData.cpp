@@ -231,3 +231,63 @@ void CrimeData :: setYear(const int & year)
     this->year = year;
 }
 
+bool CrimeData :: operator < (const CrimeData & comparedData)
+{
+    bool isLessCrime = false;
+    double comparisonFactor = 0.0;
+    
+    if(this->getAllViolent() < comparedData.getAllViolent())
+    {
+        comparisonFactor -=3;
+        
+    }
+    else
+    {
+        comparisonFactor += 3;
+        
+    }
+    
+    if(this->getAllPropertyRates() < comparedData.getAllPropertyRates())
+    {
+        comparisonFactor -= 2.5;
+        
+    }
+    else
+    {
+        comparisonFactor += 2.5;
+        
+    }
+    
+    if(this->getAllViolentRates() < comparedData.getAllViolentRates())
+    {
+        comparisonFactor -= 5;
+        
+    }
+    else
+    {
+        comparisonFactor += 5;
+        
+    }
+    
+    if(this->getMurderRates() < comparedData.getMurderRates())
+    {
+        comparisonFactor -= 3;
+        
+    }
+    else
+    {
+        comparisonFactor += 3;
+        
+    }
+    
+    long populationDifference = this->getPopulation() - comparedData.getPopulation();
+    
+    
+    if(comparisonFactor < 0)
+    {
+        isLessCrime = true;
+    }
+    
+    return isLessCrime;
+}
+
