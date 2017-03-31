@@ -280,8 +280,31 @@ bool CrimeData :: operator < (const CrimeData & comparedData)
         
     }
     
-    long populationDifference = this->getPopulation() - comparedData.getPopulation();
+    double populationDifference = (this->getPopulation() - comparedData.getPopulation());
+    populationDifference = abs(populationDifference);
+    double populationFactor = 0;
     
+    if(populationDifference >= 50000 && populationDifference < 250000)
+    {
+        populationFactor = 1.5;
+    }
+    else if(populationDifference >= 250000 && populationDifference < 500000)
+    {
+        populationFactor = 2.0;
+    }
+    else if(populationDifference >= 500000 && populationDifference < 1000000)
+    {
+        populationFactor = 2.5;
+        
+        
+    }
+    else if(populationDifference >= 1000000)
+    {
+        populationFactor = 2.5;
+        
+    }
+    
+    comparisonFactor += populationFactor;
     
     if(comparisonFactor < 0)
     {
@@ -289,5 +312,98 @@ bool CrimeData :: operator < (const CrimeData & comparedData)
     }
     
     return isLessCrime;
+}
+
+bool CrimeData :: operator > (const CrimeData & comparedData)
+{
+    bool isLessCrime = false;
+    double comparisonFactor = 0.0;
+    
+    if(this->getAllViolent() > comparedData.getAllViolent())
+    {
+        comparisonFactor -=3;
+        
+    }
+    else
+    {
+        comparisonFactor += 3;
+        
+    }
+    
+    if(this->getAllPropertyRates() > comparedData.getAllPropertyRates())
+    {
+        comparisonFactor -= 2.5;
+        
+    }
+    else
+    {
+        comparisonFactor += 2.5;
+        
+    }
+    
+    if(this->getAllViolentRates() > comparedData.getAllViolentRates())
+    {
+        comparisonFactor -= 5;
+        
+    }
+    else
+    {
+        comparisonFactor += 5;
+        
+    }
+    
+    if(this->getMurderRates() > comparedData.getMurderRates())
+    {
+        comparisonFactor -= 3;
+        
+    }
+    else
+    {
+        comparisonFactor += 3;
+        
+    }
+    
+    double populationDifference = (this->getPopulation() - comparedData.getPopulation());
+    populationDifference = abs(populationDifference);
+    double populationFactor = 0;
+    
+    if(populationDifference >= 50000 && populationDifference < 250000)
+    {
+        populationFactor = 1.5;
+    }
+    else if(populationDifference >= 250000 && populationDifference < 500000)
+    {
+        populationFactor = 2.0;
+    }
+    else if(populationDifference >= 500000 && populationDifference < 1000000)
+    {
+        populationFactor = 2.5;
+        
+        
+    }
+    else if(populationDifference >= 1000000)
+    {
+        populationFactor = 2.5;
+        
+    }
+    
+    comparisonFactor += populationFactor;
+    
+    if(comparisonFactor > 0)
+    {
+        isLessCrime = true;
+    }
+    
+    return isLessCrime;
+}
+
+
+bool CrimeData :: operator ==(const CrimeData & compared)
+{
+    bool isThisTheSame = !(*this <compared) && !(*this > compared);
+    
+    return isThisTheSame;
+    
+    
 }
 
