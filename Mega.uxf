@@ -472,10 +472,7 @@ m2=0..n</panel_attributes>
     <panel_attributes>Model :: BinarySearchTree&lt;Type&gt;
 --
 - root : BinarySearchTreeNode&lt;Type&gt; *
-- size : int (inherited)
-- height : int (inherited)
-- complete : bool (inherited)
-- balanced : bool (inherited)
+
 --
 + BinarySearchTree() : constructor
 + ~BinarySearchTree() : destructor
@@ -483,12 +480,29 @@ m2=0..n</panel_attributes>
 + getRoot() : BinarySearchTreeNode&lt;Type&gt; *
 + setRoot(BinarySearchTreeNode&lt;Type&gt; * root) : void
 
-+ calculateSize(BinarySearchTreeNode&lt;Type&gt; *) : int
+# calculateSize(BinarySearchTreeNode&lt;Type&gt; *) : int
+# calculateHeight(BinarySearchTreeNode&lt;Type&gt; *) : int
+# isComplete(BinarySearchTreeNode&lt;Type&gt; *) : bool
+# isBalanced(BinarySearchTreeNode&lt;Type&gt; *) : bool
 
-+ inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
-+ preOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
-+ postOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void 
-</panel_attributes>
+# removeNode(BinarySearchTreeNode&lt;Type&gt; *) : void
+
+# inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
+# preOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
+# postOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void 
+
++ getSize() : int
++ getHeight() : int
++ isBalanced() : bool
++ isComplete() : bool
+
++ inOrderTraversal() : void
++ preOrderTraversal() : void
++ postOrderTraversal() : void
+
++ insert(Type) : void
++ contains(Type) : bool
++ remove(Type) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -502,27 +516,19 @@ m2=0..n</panel_attributes>
     <panel_attributes>Model :: Tree&lt;Type&gt;
 --
 
-- size : int
-- height : int
-- complete : bool
-- balanced ; bool
+/+ getSize() : int/
+/+ getHeight() : int/
+/+ isComplete() : bool/
+/+ isBalanced() : bool/
 
---
 
-+ getSize() : int
-+ getHeight() : int
-+ isComplete() : bool
-+ isBalanced() : bool
+/+ inOrderTraversal() : void/
+/+ preOrderTraversal() : void/
+/+ postOrderTraversal() : void/
 
-+ setSize(int size) : void
-+ setHeight(int hight) : void
-+ setCoplete(bool complete) : void
-+ setBalanced(bool balanced) : void
-
-/+ inOrderTraversal() : void
-/+ preOrderTraversal() : void
-/+ postOrderTraversal() : void
-</panel_attributes>
+/+ insert(Type) : void/
+/+ contains(Type) : bool/
+/+ remove(Type) : void/</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
