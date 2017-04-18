@@ -10,7 +10,7 @@
 #define BinarySearchTree_h
 
 #include "Tree.hpp"
-#include "BinarySearchTreeNode.hpp"
+#include "BinarySearchTreeNode.h"
 #include <iostream>
 #include <algorithm>
 
@@ -272,7 +272,7 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: remove(Type getRifOfMe)
+void BinarySearchTree<Type> :: remove(Type getRidOfMe)
 {
     if(root == nullptr)
     {
@@ -288,7 +288,7 @@ void BinarySearchTree<Type> :: remove(Type getRifOfMe)
         {
             if(current->getNodeData() == getRidOfMe)
             {
-                haseBeenFound = true;
+                hasBeenFound = true;
             }
             else
             {
@@ -412,6 +412,11 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * & removeM
             current->getLeftChild()->setRootPointer(previous);
         }
         delete current;
+    }
+    
+    if(removeMe == nullptr || removeMe->getRootPointer == nullptr)
+    {
+        setRoot(removeMe);
     }
 }
 

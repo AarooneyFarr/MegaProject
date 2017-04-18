@@ -19,6 +19,7 @@
 #include "../Model/Queue.hpp"
 #include "../Model/CircularList.hpp"
 #include <string>
+#include "../Model/BinarySearchTree.hpp"
 
 using namespace std;
 
@@ -38,6 +39,7 @@ private:
     void testMemeQueue();
     void testLists();
     void testIntStack();
+    void testBinarySearchTreeOperations();
 public:
     StructureController();
     void start();
