@@ -38,6 +38,7 @@ public:
     Type setAtIndex(int index, Type data);
     Type getFromIndex(int index);
     bool contains(Type data);
+    int indexOf(Type data);
     int getSize() const;
     Node<Type>* getFront() const;
     Node<Type>* getEnd() const;
@@ -264,6 +265,26 @@ bool List<Type> :: contains(Type findMe)
         current = current->getNextPointer();
     }
     return isInList;
+}
+
+template <class Type>
+int List<Type> :: indexOf(Type findMe)
+{
+    int index = 0;
+    Node<Type> * current = front;
+    
+    while(current->getNextPointer() != nullptr)
+    {
+        if(current->getNodeData() == findMe)
+        {
+            return index;
+        }
+        
+        index++;
+        
+    }
+    
+    return -1;
 }
 
 
