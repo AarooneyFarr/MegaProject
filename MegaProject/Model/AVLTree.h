@@ -40,4 +40,95 @@ public:
 };
 
 
+// A Negative return value means that the right is greater than the left
+template <class Type>
+int AVLTree<Type> :: heightDiffernece(BinarySearchTreeNode<Type> * node)
+{
+    int balance;
+    int leftHeight = calculateHeight(node->getLeftChild());
+    int rightHeight = calculateHeight(node->getRightChild());
+    balance = leftHeight - rightHeight;
+    return balance;
+    
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: leftRotation(BinarySearchTreeNode<Type> * parent)
+{
+    BinarySearchTreeNode<Type> * changedNode;
+    changedNode = parent->getLeftChild();
+    
+    parent->setLeftChild(changedNode->getRightChild());
+    
+    changedNode->setRightChild(parent);
+    
+    return changedNode;
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: rightRotation(BinarySearchTreeNode<Type> * parent)
+{
+    BinarySearchTreeNode<Type> * changedNode;
+    changedNode = parent->getRightChild();
+    
+    parent->setRightCild(changedNode->getLeftChild());
+    
+    changedNode->setLEftCChild(parent);
+    
+    return changedNode;
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: rightLeftRotation(BinarySearchTreeNode<Type> * parent)
+{
+    BinarySearchTreeNode<Type> * changedNode;
+    changedNode = parent->getRightChild();
+    
+    parent->setRightChild(leftRotation(changedNode));
+    
+    return rightRotation(parent);
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: leftRightRotation(BinarySearchTreeNode<Type> * parent)
+{
+    BinarySearchTreeNode<Type> * changedNode;
+    changedNode = parent->getLeftChild();
+    
+    parent->setLeftChild(rightRotation(changedNode));
+    
+    return leftRotation(parent);
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * balanceSubTree(BinarySearchTreeNode<Type> * parent)
+{
+    int balanceFactor = heightDifference(parent);
+    
+    if(balanceFactor > 1)
+    {
+        if(heightDifference(parent->getLeftChild()) > 0)
+        {
+            parent = leftRotation(parent);
+        }
+        else
+        {
+            parent = leftRightRotation(parent);
+        }
+    }
+    else if(balanceFactor < -1)
+    {
+        if(heightDifference(parent->getRighhtChild()) > 0)
+        {
+            parent = rightLeftRotation(parent);
+        }
+        else
+        {
+            parent = rightRotation(parent);
+        }
+    }
+    return parent;
+}
+
+
 #endif /* AVLTree_h */
