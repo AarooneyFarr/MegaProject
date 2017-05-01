@@ -55,6 +55,8 @@
 		24A9E76A1E54BE26003E7F72 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = Model/IntNodeArray.hpp; sourceTree = "<group>"; };
 		24C23E261EA7B2E00027E351 /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AVLTree.h; path = Model/AVLTree.h; sourceTree = "<group>"; };
 		24DE97311E48D40700A8A690 /* MegaProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaProject; sourceTree = BUILT_PRODUCTS_DIR; };
+		24FA392D1EB77A5F009919D2 /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = HashTable.hpp; path = Model/HashTable.hpp; sourceTree = "<group>"; };
+		24FA392E1EB78A30009919D2 /* HashNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = HashNode.hpp; path = Model/HashNode.hpp; sourceTree = "<group>"; };
 		24FA7F1A1E8BF04B008AA4F3 /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = Controller/FileController.cpp; sourceTree = "<group>"; };
 		24FA7F1B1E8BF04B008AA4F3 /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = Controller/FileController.hpp; sourceTree = "<group>"; };
 		24FA7F201E8BF5E5008AA4F3 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = Model/CrimeData.cpp; sourceTree = "<group>"; };
@@ -167,6 +169,8 @@
 				242C63DE1E69C9BB005C8210 /* Inherits From DoublyLinked */,
 				2463F5741E76DAB0001431F8 /* Meme.cpp */,
 				2463F5751E76DAB0001431F8 /* Meme.hpp */,
+				24FA392D1EB77A5F009919D2 /* HashTable.hpp */,
+				24FA392E1EB78A30009919D2 /* HashNode.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
