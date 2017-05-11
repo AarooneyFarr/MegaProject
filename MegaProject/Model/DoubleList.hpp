@@ -12,26 +12,24 @@
 #include "../Model/DoublyLinkedList.hpp"
 
 
-template<class Type>
+template <class Type>
 class DoubleList : public DoublyLinkedList<Type>
 {
 private:
-    BiDirectionalNode<Type> * front;
-    BiDirectionalNode<Type> * end;
-    int size;
 public:
     DoubleList();
     ~DoubleList();
-    
     void add(Type data);
+    void addFront(Type data);
     Type remove(int index);
-    void addAtIndex(int index, Type data);
     void addAtIndexFast(int index, Type value);
-    
+    void addAtIndex(int index, Type value);
     Type getFromIndex(int index);
     Type getFromIndexFast(int index);
-    int indexOf(Type findMe);
-    int nextIndexOf(Type value, int position);
+    int indexOf(Type itemToFind);
+    int alternateIndexOf(Type findMe);
+    int nextIndexOf(Type item, int startingPoint);
+    
 };
 
 template <class Type>
@@ -43,7 +41,13 @@ DoubleList<Type> :: DoubleList() : DoublyLinkedList<Type>()
 template <class Type>
 DoubleList<Type> :: ~DoubleList()
 {
-    
+    BiDirectionalNode<Type> * remove = this->getFront();
+    while(this->getFront() != nullptr)
+    {
+        this->setFront(this->getFront()->getNextPointer());
+        delete remove;
+        remove = this->getFront();
+    }
 }
 
 template <class Type>
@@ -53,15 +57,32 @@ void DoubleList<Type> :: add(Type value)
     if(this->getSize() == 0)
     {
         this->setFront(addedNode);
+        this->setEnd(addedNode);
     }
     else
     {
         this->getEnd()->setNextPointer(addedNode);
         addedNode->setPreviousPointer(this->getEnd());
-        
     }
-    
     this->setEnd(addedNode);
+    this->setSize(this->getSize() + 1);
+}
+
+template <class Type>
+void DoubleList<Type> :: addFront(Type value)
+{
+    BiDirectionalNode<Type> * addedNode = new BiDirectionalNode<Type>(value);
+    if(this->getSize() == 0)
+    {
+        this->setFront(addedNode);
+        this->setEnd(addedNode);
+    }
+    else
+    {
+        this->getFront()->setPreviousPointer(addedNode);
+        addedNode->setNextPointer(this->getEnd());
+    }
+    this->setFront(addedNode);
     this->setSize(this->getSize() + 1);
 }
 
@@ -70,12 +91,10 @@ Type DoubleList<Type> :: remove(int index)
 {
     Type derp;
     BiDirectionalNode<Type> * nodeToTakeOut = this->getFront();
-    
-    for(int spot = 0; spot < index; spot++)
+    for(int spot =0; spot< index; spot++)
     {
         nodeToTakeOut = nodeToTakeOut->getNextPointer();
     }
-    
     derp = nodeToTakeOut->getNodeData();
     
     BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
@@ -85,29 +104,16 @@ Type DoubleList<Type> :: remove(int index)
     next->setPreviousPointer(prev);
     
     delete nodeToTakeOut;
-    
     this->setSize(this->getSize() - 1);
     return derp;
-}
-
-template <class Type>
-void DoubleList<Type> :: addAtIndex(int index, Type data)
-{
     
 }
 
 template <class Type>
-Type DoubleList<Type> :: getFromIndex(int index)
+void DoubleList<Type> :: addAtIndexFast(int index, Type value)
 {
-    Type egg;
-    return egg;
-}
-
-template <class Type>
-Type DoubleList<Type> :: getFromIndexFast(int index)
-{
+    //Not finished
     assert(index >= 0 && index < this->getSize());
-    
     Type valueAtIndex;
     BiDirectionalNode<Type> * reference;
     if(index < this->getSize() /2)
@@ -115,10 +121,8 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
         reference = this->getFront();
         for(int position = 0; position < index; position++)
         {
-            reference = reference->getNextPointer();
-            
+            reference = reference ->getPreviousPointer();
         }
-        
     }
     else
     {
@@ -128,15 +132,90 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
             reference = reference->getPreviousPointer();
         }
     }
+    
+    
+}
+
+template <class Type>
+void DoubleList<Type> :: addAtIndex(int index, Type value)
+{
+    assert(index >= 0 && index <= this->getSize());
+    if(index == 0)
+    {
+        addFront(value);
+    }
+    else if (this->getSize() == index)
+    {
+        add(value);
+    }
+    else
+    {
+        BiDirectionalNode<Type> * insertedNode = new BiDirectionalNode<Type>(value);
+        BiDirectionalNode<Type> * current = this->getFront();
+        BiDirectionalNode<Type> * previous = nullptr;
+        
+        for(int position = 0; position < index; position++)
+        {
+            previous = current;
+            current = current->getNextPointer();
+        }
+        
+        previous->setNextPointer(insertedNode);
+        insertedNode->setNextPointer(current);
+        insertedNode->setPreviousPointer(previous);
+        current->setPreviousPointer(insertedNode);
+        
+        this->setSize(this->getSize() + 1);
+    }
+}
+
+template <class Type>
+Type DoubleList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->getSize());
+    Type information;
+    BiDirectionalNode<Type> * current = this->getFront();
+    for (int position = 0; position < index; position++)
+    {
+        current = current->getNextPointer();
+    }
+    
+    information = current->getNodeData();
+    return information;
+}
+
+template <class Type>
+Type DoubleList<Type> :: getFromIndexFast(int index)
+{
+    assert(index >= 0 && index < this->getSize());
+    Type valueAtIndex;
+    BiDirectionalNode<Type> * reference;
+    if(index < this->getSize() /2)
+    {
+        reference = this->getFront();
+        for(int position = 0; position < index; position++)
+        {
+            reference = reference ->getPreviousPointer();
+        }
+    }
+    else
+    {
+        reference = this->getEnd();
+        for(int position = this->getSize() - 1; position > index; position--)
+        {
+            reference = reference->getPreviousPointer();
+        }
+    }
+    
     valueAtIndex = reference->getNodeData();
     return valueAtIndex;
 }
 
-//loop over structure
-//compare nodes data to parameter
-//if the match set index to count of loop
-//else continue
-//return
+//Loop over structure
+//Compare Node's data to parameter
+//If they match, return index to count of loop
+//Else continue
+//return invalid/not in list
 
 template <class Type>
 int DoubleList<Type> :: indexOf(Type findMe)
@@ -158,7 +237,28 @@ int DoubleList<Type> :: indexOf(Type findMe)
 }
 
 template <class Type>
-int DoubleList<Type> :: nextIndexOf(Type value, int position)
+int DoubleList<Type> :: alternateIndexOf(Type findMe)
+{
+    int alternate = 0;
+    for (BiDirectionalNode<Type> * search = this->getFront(); search != nullptr; search = search->getNextPointer())
+    {
+        if (findMe != search->getNodeData())
+        {
+            alternate++;
+        }
+    }
+    if(alternate>= this->getSize())
+    {
+        return -1;
+    }
+    else
+    {
+        return alternate;
+    }
+}
+
+template <class Type>
+int  DoubleList<Type> :: nextIndexOf(Type value, int position)
 {
     assert(position >= 0 && position < this->getSize());
     
@@ -166,9 +266,8 @@ int DoubleList<Type> :: nextIndexOf(Type value, int position)
     
     BiDirectionalNode<Type> * current = this->getFront();
     
-    for(int index = 0; index < this->getSize(); index++)
+    for (int index = 0; index < this->getSize(); index ++)
     {
-        
         if(index >= position)
         {
             if(current->getNodeData() == value)
@@ -180,10 +279,7 @@ int DoubleList<Type> :: nextIndexOf(Type value, int position)
     }
     
     return nextIndex;
-    
-    
 }
 
 
-
-#endif /* DoubleList_h */
+#endif /* DoubleList_h */ß

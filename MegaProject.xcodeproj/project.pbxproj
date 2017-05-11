@@ -45,6 +45,7 @@
 		24799D631E9D260100B2EE08 /* Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Tree.hpp; path = Model/Tree.hpp; sourceTree = "<group>"; };
 		24799D641E9D2A1600B2EE08 /* BinarySearchTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = BinarySearchTree.hpp; path = Model/BinarySearchTree.hpp; sourceTree = "<group>"; };
 		249CD8F71E5CA39700537B1A /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = Model/List.hpp; sourceTree = "<group>"; };
+		249F7D4D1EC4A291009E4E10 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Graph.hpp; path = Model/Graph.hpp; sourceTree = "<group>"; };
 		24A9E7631E54BE26003E7F72 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = Model/Array.h; sourceTree = "<group>"; };
 		24A9E7641E54BE26003E7F72 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		24A9E7651E54BE26003E7F72 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = Model/Timer.cpp; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 				2463F5751E76DAB0001431F8 /* Meme.hpp */,
 				24FA392D1EB77A5F009919D2 /* HashTable.hpp */,
 				24FA392E1EB78A30009919D2 /* HashNode.hpp */,
+				249F7D4D1EC4A291009E4E10 /* Graph.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
