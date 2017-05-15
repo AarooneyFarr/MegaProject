@@ -10,6 +10,7 @@
 #define DoubleList_h
 
 #include "../Model/DoublyLinkedList.hpp"
+#include <assert.h>
 
 
 template <class Type>
@@ -282,4 +283,4 @@ int  DoubleList<Type> :: nextIndexOf(Type value, int position)
 }
 
 
-#endif /* DoubleList_h */ß
+#endif /* DoubleList_h */

@@ -20,6 +20,7 @@
 #include "../Model/CircularList.hpp"
 #include <string>
 #include "../Model/BinarySearchTree.hpp"
+#include "../Model/Tree.hpp"
 
 using namespace std;
 
@@ -40,6 +41,8 @@ private:
     void testLists();
     void testIntStack();
     void testBinarySearchTreeOperations();
+   
+
 public:
     StructureController();
     void start();

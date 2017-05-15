@@ -20,7 +20,7 @@ class Graph
 private:
     static const int MAXIMUM = 20;
     bool adjacencyMatrix [MAXIMUM][MAXIMUM];
-    type graphData[MAXIMUM];
+    Type graphData[MAXIMUM];
     int vertextCount;
     void depthFirstTraversal(Graph<Type> graph, int vertex, bool markedVertices[]);
 public:

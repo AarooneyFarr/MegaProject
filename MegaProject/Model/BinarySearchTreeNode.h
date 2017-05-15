@@ -21,8 +21,8 @@ private:
     BinarySearchTreeNode<Type> * rightChild;
     
 public:
-    ~BinarySearchTreeNode();
     BinarySearchTreeNode();
+    ~BinarySearchTreeNode();
     BinarySearchTreeNode(Type data);
     
     BinarySearchTreeNode<Type> * getRootPointer();
@@ -92,4 +92,10 @@ void BinarySearchTreeNode<Type> :: setRightChild(BinarySearchTreeNode<Type> * ri
 {
     this->rightChild = right;
 }
+
+
+
+
+
+
 #endif /* BinarySearchTreeNode_h */

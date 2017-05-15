@@ -12,6 +12,8 @@
 #include "../Model/Timer.hpp"
 #include "../Model/List.hpp"
 #include "../Model/Meme.hpp"
+#include "../Model/Tree.hpp"
+#include "../Model/BinarySearchTree.hpp"
 
 
 using namespace std;
@@ -95,6 +97,7 @@ void StructureController :: start()
     //testLists();
     //testIntStack();
     testBinarySearchTreeOperations();
+   
 
 }
 
@@ -248,3 +251,5 @@ void StructureController :: testBinarySearchTreeOperations()
     cout << "Balanced should be false || 0 and is: " << numbers.isBalanced() << endl;
     
 }
+
+
