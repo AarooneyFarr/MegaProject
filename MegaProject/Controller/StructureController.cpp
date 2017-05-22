@@ -244,7 +244,25 @@ void StructureController :: testBinarySearchTreeOperations()
     
     numbers.inOrderTraversal();
     
+    cout << "Post order traversal should be \n\t-45677654 \n\t-123 \n\t43 \n\t10 \n\t92165 \n\t43243 \n\t23465 \n\t9843" << endl;
     
+    numbers.postOrderTraversal();
+    
+    numbers.remove(-45677654);
+    
+    cout << "Size should be 7 and is: " << numbers.getSize() << endl;
+    
+    cout << "Pre order traversal should be \n\t9843 \n\t10 \n\t-123 \n\t43 \n\t23465 \n\t43243 \n\t92165" << endl;
+    
+    numbers.preOrderTraversal();
+    
+    numbers.remove(10);
+    
+    cout << "Size should be 6 and is: " << numbers.getSize() << endl;
+    
+    cout << "Pre order traversal should be \n\t9843 \n\t-123 \n\t43 \n\t23465 \n\t43243 \n\t92165" << endl;
+    
+    numbers.preOrderTraversal();
     
     cout << "Height should be 4 and is: " << numbers.getHeight() << endl;
     

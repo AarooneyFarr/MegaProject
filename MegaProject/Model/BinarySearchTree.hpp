@@ -321,6 +321,7 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
         
     }
 }
+
 //Removes item from tree only if the item is in the tree
 template <class Type>
 void BinarySearchTree<Type> :: remove(Type getRidOfMe)
@@ -396,11 +397,11 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
         temp = removeMe;
         removeMe = nullptr;
         
-        if(previous != nullptr && removeMe->getNodeData() < previous->getNodeData())
+        if(previous != nullptr && temp->getNodeData() < previous->getNodeData())
         {
             previous->setLeftChild(removeMe);
         }
-        else if(previous != nullptr && removeMe->getNodeData() > previous->getNodeData())
+        else if(previous != nullptr && temp->getNodeData() > previous->getNodeData())
         {
             previous->setRightChild(removeMe);
         }
@@ -413,11 +414,11 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
         temp = removeMe;
         removeMe = removeMe->getLeftChild();
         
-        if(previous != nullptr && removeMe->getNodeData() < previous->getNodeData())
+        if(previous != nullptr && temp->getNodeData() < previous->getNodeData())
         {
             previous->setLeftChild(removeMe);
         }
-        else if(previous != nullptr && removeMe->getNodeData() > previous->getNodeData())
+        else if(previous != nullptr && temp->getNodeData() > previous->getNodeData())
         {
             previous->setRightChild(removeMe);
         }
@@ -469,9 +470,9 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
         delete current;
     }
     
-    if (removeMe == nullptr || removeMe->getRootPointer() == nullptr)
+    if (temp == nullptr || temp->getRootPointer() == nullptr)
     {
-        setRoot(removeMe);
+        setRoot(temp);
     }
 }
 
