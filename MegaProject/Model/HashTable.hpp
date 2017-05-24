@@ -18,7 +18,7 @@ class HashTable
 {
 private:
     long capacity;
-    long sze;
+    long size;
     double efficiencyPercentage;
     Type * * hashTableStorage;
     bool isPrime(long sampleNumber);

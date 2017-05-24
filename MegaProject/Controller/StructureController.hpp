@@ -41,6 +41,7 @@ private:
     void testLists();
     void testIntStack();
     void testBinarySearchTreeOperations();
+    void testGraph();
    
 
 public:

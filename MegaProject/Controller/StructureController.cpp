@@ -14,6 +14,7 @@
 #include "../Model/Meme.hpp"
 #include "../Model/Tree.hpp"
 #include "../Model/BinarySearchTree.hpp"
+#include "../Model/Graph.hpp"
 
 
 using namespace std;
@@ -212,6 +213,18 @@ void StructureController :: testIntStack()
     
 }
 
+void StructureController :: testGraph()
+{
+    Graph<string> words;
+    words.addVertex("Aaron");
+    words.addVertex("Thomas");
+    words.addVertex("Harry");
+    words.addVertex("Bekah");
+    words.addVertex("Rachel");
+    
+    
+}
+
 void StructureController :: testBinarySearchTreeOperations()
 
 {
@@ -269,5 +282,7 @@ void StructureController :: testBinarySearchTreeOperations()
     cout << "Balanced should be false || 0 and is: " << numbers.isBalanced() << endl;
     
 }
+
+
 
 
