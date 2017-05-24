@@ -97,7 +97,9 @@ void StructureController :: start()
     //testMemeQueue();
     //testLists();
     //testIntStack();
-    testBinarySearchTreeOperations();
+    //testBinarySearchTreeOperations();
+    //testGraph();
+    testHashTable();
    
 
 }
@@ -221,6 +223,39 @@ void StructureController :: testGraph()
     words.addVertex("Harry");
     words.addVertex("Bekah");
     words.addVertex("Rachel");
+    
+    words.addEdge(0,1);
+    words.addEdge(1,2);
+    words.addEdge(2,3);
+    words.addEdge(3,4);
+    words.addEdge(4,0);
+    
+    words.depthFirstTraversal(words,0);
+    words.breadthFirstTraversal(words,0);
+    
+    
+    
+    
+    
+}
+
+void StructureController :: testHashTable()
+{
+    HashTable<string> hashWords;
+    
+    hashWords.add("derpy");
+    hashWords.add("is");
+    hashWords.add("ammars");
+    hashWords.add("middle");
+    hashWords.add("name");
+    hashWords.add("just");
+    hashWords.add("in");
+    hashWords.add("case");
+    hashWords.add("you");
+    hashWords.add("didn't");
+    hashWords.add("know");
+    
+    hashWords.displayContents();
     
     
 }

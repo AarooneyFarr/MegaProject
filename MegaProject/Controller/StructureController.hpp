@@ -21,6 +21,7 @@
 #include <string>
 #include "../Model/BinarySearchTree.hpp"
 #include "../Model/Tree.hpp"
+#include "../Model/HashTable.hpp"
 
 using namespace std;
 
@@ -42,6 +43,7 @@ private:
     void testIntStack();
     void testBinarySearchTreeOperations();
     void testGraph();
+    void testHashTable();
    
 
 public:

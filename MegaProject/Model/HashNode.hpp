@@ -9,8 +9,7 @@
 #ifndef HashNode_h
 #define HashNode_h
 
-#ifndef HashNode_hpp
-#define HashNode_h
+
 
 template <class Type>
 class HashNode
@@ -39,11 +38,11 @@ template <class Type>
 HashNode<Type> :: HashNode(Type data)
 {
     this->key = rand();
-    this->data = data();
+    this->data = data;
 }
 
 template <class Type>
-long HashNode :: getKey() const
+long HashNode<Type> :: getKey() const
 {
     return this->key;
 }
