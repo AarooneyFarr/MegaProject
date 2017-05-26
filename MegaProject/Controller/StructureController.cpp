@@ -97,9 +97,9 @@ void StructureController :: start()
     //testMemeQueue();
     //testLists();
     //testIntStack();
-    //testBinarySearchTreeOperations();
+    testBinarySearchTreeOperations();
     //testGraph();
-    testHashTable();
+    //testHashTable();
    
 
 }

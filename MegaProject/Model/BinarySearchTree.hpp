@@ -152,6 +152,7 @@ bool BinarySearchTree<Type> :: isBalanced(BinarySearchTreeNode<Type> * start)
     
     return false;
 }
+
 //Finds the height so it can be checked for balance
 template <class Type>
 int BinarySearchTree<Type> :: calculateHeight(BinarySearchTreeNode<Type> * start)
@@ -165,6 +166,7 @@ int BinarySearchTree<Type> :: calculateHeight(BinarySearchTreeNode<Type> * start
         return 1 + max(calculateHeight(start->getLeftChild()), calculateHeight(start->getRightChild()));
     }
 }
+
 //Counts the number of nodes to see size of the tree
 template <class Type>
 int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
@@ -181,6 +183,7 @@ int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
         return count;
     }
 }
+
 /*
  In order traversal goes in the order left, root, right
  Notice that the non-recursive case does NOTHING
@@ -195,6 +198,7 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinarySearchTreeNode<Type> * inS
         inOrderTraversal(inStart->getRightChild());
     }
 }
+
 /*
  Pre order traversal goes in the order root, left, right
  notice that the non recursive case does NOTHING
@@ -209,6 +213,7 @@ void BinarySearchTree<Type> :: preOrderTraversal(BinarySearchTreeNode<Type> * pr
         preOrderTraversal(preStart->getRightChild());
     }
 }
+
 /*
  Post order traversal goes in the order left, right, root
  */
@@ -247,6 +252,7 @@ BinarySearchTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinarySe
     
     return temp;
 }
+
 //trys to find an item in the tree, returns true if it is in there
 template <class Type>
 bool BinarySearchTree<Type> :: contains(Type itemToFind)
@@ -460,12 +466,18 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
         if(previous == nullptr)
         {
             removeMe->setLeftChild(current->getLeftChild());
+            if(current->getLeftChild() != nullptr)
+            {
             current->getLeftChild()->setRootPointer(removeMe);
+            }
         }
         else
         {
             previous->setRightChild(current->getLeftChild());
+            if(current->getLeftChild() != nullptr)
+            {
             current->getLeftChild()->setRootPointer(previous);
+            }
         }
         delete current;
     }
